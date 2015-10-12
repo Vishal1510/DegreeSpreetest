@@ -96,11 +96,12 @@ public class GameController {
             }
 
         }
+        gameplayView.updateScoreBoard();
     }
     
     public void playCard(Card card) {
         // At somepoint play the card yo
-
+        gameplayView.updateScoreBoard();
         endTurn(currentPlayersTurn);
         nextTurn();
     }
