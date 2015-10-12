@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 11, 2015, 9:11:31 PM
+    Author     : john
+*/
+
+.player-icon {
+    -fx-font-size: 24pt;
+    -fx-font-family: "Serif";
+    -fx-padding: 10;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: blue ;
+    -fx-border-width: 5 ; 
+}
