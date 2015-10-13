@@ -28,8 +28,6 @@ public class GameController {
     private int currentPlayerIndex = 0;
     private GameBoard gameBoard;
 
-    
-    
     public GameController(Stage stage) {
         this.stage = stage;
         
@@ -63,10 +61,12 @@ public class GameController {
         currentPlayersTurn = player;
         if (player.isHuman()) {
             player.startTurn();
+            gameplayView.enable();
             ArrayList<BoardPosition> positions = gameBoard.getPositions(player.getBoardPosition().getNearbyPositions());
             gameplayView.updateMovableLocation(positions);
         } else {
             // Eventually disable components so player cant screw the game up
+            gameplayView.disable();
             player.startTurn();
         }
 
@@ -90,7 +90,6 @@ public class GameController {
             currentPlayersTurn.decrementMovesLeft();
 
             if (currentPlayersTurn.isHuman()) {
-                // must change
                 ArrayList<BoardPosition> movableLocations = gameBoard.getPositions(position.getNearbyPositions());
                 gameplayView.updateMovableLocation(movableLocations);
             }
@@ -101,6 +100,7 @@ public class GameController {
     
     public void playCard(Card card) {
         // At somepoint play the card yo
+        
         gameplayView.updateScoreBoard();
         endTurn(currentPlayersTurn);
         nextTurn();

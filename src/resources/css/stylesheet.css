@@ -9,10 +9,20 @@ and open the template in the editor.
 */
 
 .player-icon {
-    -fx-font-size: 24pt;
+    -fx-font-size: 20pt;
     -fx-font-family: "Serif";
-    -fx-padding: 10;
+    -fx-padding: 5;
     -fx-background-color: #FFFFFF;
     -fx-border-color: blue ;
-    -fx-border-width: 5 ; 
+    -fx-border-width: 2 ; 
 }
+
+.score-board {
+    -fx-padding: 10;
+    -fx-margin: 10;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #d1bebe;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+

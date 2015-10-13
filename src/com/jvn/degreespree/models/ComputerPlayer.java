@@ -53,13 +53,14 @@ public class ComputerPlayer implements Player {
 
     @Override
     public void startTurn() {
+ 
         movesLeft = 3;
 
         while(movesLeft > 0) {
             boardPosition = getRandomPosition();
             gameController.movePlayer(boardPosition);
+            
         }
-
         playRandomCard();
     }
 

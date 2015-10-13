@@ -18,6 +18,9 @@ public class PlayerIcon extends Label {
     public void setup(Player player) {
         this.setText(player.getPlayerName());
         this.getStyleClass().add("player-icon");
+        if (!player.isHuman()) {
+            this.setStyle("-fx-border-color: red;");
+        }
     }
     
 }
